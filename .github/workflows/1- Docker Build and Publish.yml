@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to build from'
+        description: 'Action'
+        default: 'Build And Publish Docker Image'
         required: true
-        default: 'main'
 
 env:
   AZURE_CHATGTP_REPOSITORY: 'microsoft/azurechatgpt'
