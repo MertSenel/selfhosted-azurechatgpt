@@ -55,4 +55,4 @@ jobs:
         with:
           context: ./src
           push: true
-          tags: ghcr.io/${{ env.GITHUB_ACTOR_LOWER }}/${{ env.github.repository }}/${{ env.AZURE_CHATGTP_REPOSITORY }}:${{ env.SHORT_COMMIT_SHA }} # Tagging with the shortened commit SHA
+          tags: ghcr.io/${{ env.GITHUB_ACTOR_LOWER }}/${{ GITHUB.REPOSITORY }}/${{ env.AZURE_CHATGTP_REPOSITORY }}:${{ env.SHORT_COMMIT_SHA }} # Tagging with the shortened commit SHA
