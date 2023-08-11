@@ -29,11 +29,11 @@ jobs:
 
       - name: Convert GitHub Actor to Lowercase
         run: |
-          echo "GITHUB_ACTOR_LOWER=${{ github.actor }}".ToLower() >> $GITHUB_ENV
+          echo "GITHUB_ACTOR_LOWER=${{ GITHUB_ACTOR }}".ToLower() >> $GITHUB_ENV
           echo "SHORT_COMMIT_SHA=${{ env.COMMIT_SHA }}".Substring(0, 7) >> $GITHUB_ENV
         shell: pwsh
 
-      - name: Convert GitHub Actor to Lowercase
+      - name: Debug Pipeline Variables
         run: |
           echo "Debug Pipeline Variables"
           echo "GITHUB_ACTOR_LOWER: ${{ env.GITHUB_ACTOR_LOWER }}"
