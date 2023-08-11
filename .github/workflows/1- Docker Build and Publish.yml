@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Debug Pipeline Variables"
           echo "GITHUB_ACTOR_LOWER: ${{ env.GITHUB_ACTOR_LOWER }}"
-          echo "SHORT_COMMIT_SHA: ${{ SHORT_COMMIT_SHA }}"
+          echo "SHORT_COMMIT_SHA: ${{ env.SHORT_COMMIT_SHA }}"
         shell: pwsh
 
       - name: Set up Docker Buildx
