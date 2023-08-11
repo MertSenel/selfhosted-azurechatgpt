@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Debug Pipeline Variables"
           echo "GITHUB_ACTOR_LOWER: ${{ env.GITHUB_ACTOR_LOWER }}"
-          echo "GH_TOKEN_PACKAGES_WRITE (This should be redacted): ${{ secrets.GH_TOKEN_PACKAGES_WRITE }}"
+          echo "SHORT_COMMIT_SHA: ${{ SHORT_COMMIT_SHA }}"
         shell: pwsh
 
       - name: Set up Docker Buildx
@@ -48,7 +48,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ env.GITHUB_ACTOR_LOWER }}
-          password: ${{ secrets.GH_TOKEN_PACKAGES_WRITE }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v2
