@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Debug Pipeline Variables"
           echo "GITHUB_ACTOR_LOWER: ${{ env.GITHUB_ACTOR_LOWER }}"
-          echo "GH_TOKEN_PACKAGES_WRITE (This should be redacted): ${{ secrets.GH_TOKEN_PACKAGES_WRITE }}
+          echo "GH_TOKEN_PACKAGES_WRITE (This should be redacted): ${{ secrets.GH_TOKEN_PACKAGES_WRITE }}"
         shell: pwsh
 
       - name: Set up Docker Buildx
